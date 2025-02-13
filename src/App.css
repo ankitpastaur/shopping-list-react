@@ -1,0 +1,12 @@
+.App{
+  text-align: center;
+}
+
+.input-item {
+  width: 230px;
+  height: 40px;
+  outline: none;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px;
+}
