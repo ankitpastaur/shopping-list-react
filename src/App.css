@@ -30,3 +30,39 @@
 .suggestion-item:hover {
   background-color:aquamarine
 }
+
+.bucketList {
+  width: 300px;
+  margin: 50px auto;
+}
+
+.shoppingList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightgreen;
+  height: 30px auto;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+button{
+  background-color: lightgreen;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: white;
+  border-radius: 50%;
+}
+
+.strik{
+  text-decoration: line-through;
+  color: gray;
+}

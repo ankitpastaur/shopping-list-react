@@ -46,7 +46,26 @@ function App() {
       const copyBucketList = [...bucketList];
       copyBucketList.push(obj);
       setBucketList(copyBucketList);
+      console.log(copyBucketList);
     }
+    setProduct("");
+  };
+
+  const handleRightClick = (id) => {
+    const copyBucketList = [...bucketList];
+    const newBucketList = copyBucketList.map((item) => {
+      if (item.id === id) {
+        item.isDone = !item.isDone;
+      }
+      return item;
+    });
+    setBucketList(newBucketList);
+  };
+
+  const handleDelete = (id) => {
+    const copyBucketList = [...bucketList];
+    const newBucketList = copyBucketList.filter((item) => item.id !== id);
+    setBucketList(newBucketList);
   };
 
   return (
@@ -62,7 +81,19 @@ function App() {
           ))}
         </div>
       </div>
-      <div className="bucketList"></div>
+      <div className="bucketList">
+        {bucketList.map((item) => {
+          return (
+            <div className="shoppingList">
+              <button onClick={() => handleRightClick(item.id)}>✓</button>
+              <div className={item.isDone ? "strik" : ""}>
+                {item.data.title}
+              </div>
+              <button onClick={() => handleDelete(item.id)}>X</button>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
